@@ -1,0 +1,58 @@
+Type,Question,Options/Answer,Correct/Explanation
+MCQ,Which of the following is NOT a major application of Computer Graphics?,A) Computer-Aided Design | B) Data Mining | C) Visualization | D) Image Processing,"Correct: B - Data Mining is not a direct application of Computer Graphics. The major applications include CAD, Presentation Graphics, Computer Art, Entertainment, Education, Visualization, Image Processing, and GUI."
+MCQ,What does CAD stand for in Computer Graphics?,A) Computer Algorithm Design | B) Computer-Aided Design | C) Computer Art Development | D) Computer Animation Display,"Correct: B - CAD stands for Computer-Aided Design, used for creating wireframe models, realistic renderings, and controlling manufacturing processes."
+MCQ,"Which application uses bar charts, pie charts, and surface graphs?",A) CAD | B) Image Processing | C) Presentation Graphics | D) GUI,Correct: C - Presentation Graphics produces illustrations for reports and slides including various chart types to show data relationships.
+MCQ,What is the typical refresh rate for CRT displays to avoid flicker?,A) 30-40 fps | B) 50-55 fps | C) 60-80 fps | D) 90-120 fps,Correct: C - CRT displays typically refresh at 60-80 frames per second to prevent visible flicker since phosphor light fades rapidly.
+MCQ,Which color CRT method uses three separate electron guns?,A) Beam-Penetration Method | B) Shadow-Mask Method | C) Direct-View Method | D) Plasma Method,"Correct: B - Shadow-Mask Method uses three electron guns (one each for Red, Green, Blue) with a shadow mask to create a wide range of colors."
+MCQ,What type of display is LCD classified as?,A) Emissive Display | B) Non-Emissive Display | C) Storage Display | D) Vector Display,Correct: B - LCD is a Non-Emissive Display that uses liquid crystals to control light passage and requires backlight or external light.
+MCQ,What does DDA stand for?,A) Digital Display Algorithm | B) Direct Drawing Algorithm | C) Digital Differential Analyzer | D) Display Data Analyzer,"Correct: C - DDA stands for Digital Differential Analyzer, the simplest line drawing algorithm."
+MCQ,"In DDA Algorithm, what is M?",A) The starting X coordinate | B) The slope of the line | C) The ending Y coordinate | D) The number of steps,"Correct: B - M represents the slope of the line, calculated as M = ΔY / ΔX."
+MCQ,What is the main advantage of Bresenham Algorithm over DDA?,A) Uses floating-point arithmetic | B) Requires rounding operations | C) Uses only integer arithmetic | D) More complex implementation,"Correct: C - Bresenham Algorithm uses only integer arithmetic (addition/subtraction), making it faster and more efficient than DDA."
+MCQ,Which algorithm is more accurate for drawing circles?,A) DDA Algorithm | B) Bresenham Algorithm | C) Both are equally accurate | D) Neither can draw circles,Correct: B - Bresenham Algorithm provides higher accuracy for drawing circles and curves compared to DDA.
+Short Answer,List and briefly explain any 4 applications of Computer Graphics. (8 marks),"1. CAD: Computer-Aided Design for creating wireframe models and controlling manufacturing
+2. Presentation Graphics: Creating charts and graphs for reports and slides
+3. Entertainment: Computer animation for films, TV, and special effects
+4. Visualization: Converting data into pictures for better understanding
+5. Image Processing: Modifying and interpreting existing images
+6. GUI: Windows, icons, menus for user interaction
+(Any 4 applications with brief explanations)",
+Short Answer,Compare Raster Scan and Random Scan displays. (6 marks),"Raster Scan: Electron beam sweeps row by row, stores picture in frame buffer, good for realistic images, refresh entire screen
+Random Scan: Draws only required lines, stores as line commands, good for line drawings, vector-based, cannot display shaded scenes",
+Short Answer,Explain the working principle of CRT display. (5 marks),"CRT works by emitting electron beam from electron gun, passing through focusing and deflection systems to specific positions on phosphor-coated screen. Phosphor emits light when contacted by electron beam. Since light fades rapidly, picture must be refreshed repeatedly at 60-80 fps.",
+Long Answer,"Implement DDA Line Drawing Algorithm step by step for drawing a line from (2,2) to (8,6). Show all calculations. (10 marks)","Given: (X0,Y0) = (2,2), (Xn,Yn) = (8,6)
+
+Step 1: Calculate parameters
+ΔX = 8-2 = 6
+ΔY = 6-2 = 4  
+M = 4/6 = 0.67
+
+Step 2: Since M < 1, use Case 1
+Points: (2,2) → (3,2.67)≈(3,3) → (4,3.33)≈(4,3) → (5,4) → (6,4.67)≈(6,5) → (7,5.33)≈(7,5) → (8,6)
+
+Final points: (2,2), (3,3), (4,3), (5,4), (6,5), (7,5), (8,6)",
+Long Answer,Compare DDA and Bresenham Line Drawing Algorithms in detail. (10 marks),"DDA Algorithm:
+- Uses floating-point arithmetic
+- Requires multiplication/division
+- Slower due to rounding operations
+- Less accurate for curves
+- Simple to implement
+
+Bresenham Algorithm:
+- Uses only integer arithmetic
+- Only addition/subtraction operations
+- Faster execution
+- Higher accuracy for lines and circles
+- No rounding required
+- More efficient overall
+
+Conclusion: Bresenham is preferred for most applications due to speed and accuracy.",
+Long Answer,Explain different types of Flat-Panel Displays with their advantages and disadvantages. (12 marks),"Emissive Displays:
+1. Plasma Panel: Uses ionized gas, good brightness, wide viewing angle but high power consumption
+2. LED: Fast, reliable, low power, long life but expensive for large displays
+3. Thin-film Electroluminescent: Good resolution but limited color range
+
+Non-Emissive Displays:
+1. LCD: Lightweight, low power but limited viewing angle and requires backlight
+
+Advantages: Lightweight, compact, low power
+Disadvantages: Viewing angle limitations, brightness dependency",

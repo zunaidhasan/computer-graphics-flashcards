@@ -1,0 +1,75 @@
+Question,Answer
+What is Computer Graphics?,"Computer Graphics is the use of computers to display and manipulate information in graphical or pictorial form, either on a visual-display unit or via a printer or plotter."
+Name 4 major applications of Computer Graphics,"1. Computer-Aided Design (CAD)
+2. Presentation Graphics
+3. Computer Art
+4. Entertainment
+5. Education and Training
+6. Visualization
+7. Image Processing
+8. Graphical User Interface (GUI)"
+What is CAD in Computer Graphics?,"Computer-Aided Design - uses animations, wireframe displays, realistic lighting models and surface rendering for designing and testing vehicles, manufacturing processes, and circuit layouts."
+What are Presentation Graphics?,"Graphics used for producing illustrations for reports or slides - includes bar charts, line graphs, surface graphs, pie charts, and other displays showing relationships between data."
+What is the role of Computer Graphics in Entertainment?,"Used in producing computer animation for films, television, music videos, often combining live action with computer graphics scenes for special effects."
+What is Visualization in Computer Graphics?,"Converting data and information into pictures to gain insight and better understanding - used in scientific, engineering, medical, and business applications."
+What is Image Processing?,"Techniques applied to modify or interpret existing images - includes digitization, storage, image enhancement, and analysis. Important in medical applications."
+What is a GUI?,"Graphical User Interface - a component that uses windows, icons, menus, and pointing devices for user interaction with computer systems."
+What is a Cathode-Ray Tube (CRT)?,"A display device where a beam of electrons (cathode rays) emitted by an electron gun passes through focusing and deflection systems to specified positions on a phosphor-coated screen, emitting light."
+Why does CRT need refresh?,"Because the light emitted by the phosphor fades very rapidly, so the picture must be redrawn repeatedly and quickly to maintain a stable image."
+What is a Raster Scan Display?,A display system where the electron beam sweeps across the screen one row at a time from top to bottom. Picture information is stored in a refresh/frame buffer.
+What is a Random-Scan Display?,Also called vector display - draws only the required lines/components of the picture. Picture is stored as a set of line-drawing commands in a refresh display file.
+What is the typical refresh rate for displays?,60 to 80 frames per second to avoid flicker.
+What are the two methods for color CRT?,"1. Beam-Penetration Method
+2. Shadow-Mask Method"
+Explain Beam-Penetration Method,"Uses layered phosphor (red and green). The speed of electrons determines which layer glows. Limited color range, primarily produces red and green."
+Explain Shadow-Mask Method,"Uses three electron guns (one each for Red, Green, Blue) and a shadow mask with holes. Each gun illuminates specific color phosphor dots, allowing wide range of colors."
+What is a Direct-View Storage Tube (DVST)?,"A display that stores picture information inside the CRT, eliminating need for refresh. Good for complex static images but cannot erase selectively - must redraw entire screen."
+What are the two types of Flat-Panel Displays?,"1. Emissive Displays (convert electrical energy to light)
+2. Non-Emissive Displays (use optical effects to convert light)"
+Name 3 types of Emissive Displays,"1. Plasma Panel
+2. Thin-Film Electroluminescent Display
+3. LED (Light-Emitting Diode)"
+What is a Plasma Panel?,Constructed by filling region between two glass plates with mixture of gases (neon + argon). Ionized gas emits light. Forms glowing spots at intersections.
+What is LCD?,Liquid Crystal Display - a non-emissive display that uses liquid crystals to control light passage. Requires backlight or external light source.
+Advantages of LED displays?,"Fast, reliable, low power consumption, long life, small size, lightweight."
+Disadvantages of LCD?,"Limited viewing angle, brightness depends on external light source."
+What are the 3 popular line drawing algorithms?,"1. Digital Differential Analyzer (DDA) Line Drawing Algorithm
+2. Bresenham Line Drawing Algorithm
+3. Mid Point Line Drawing Algorithm"
+What is DDA Algorithm?,Digital Differential Analyzer - the simplest line drawing algorithm that generates points between starting and ending coordinates of a line.
+What are the initial parameters for DDA?,"ΔX = Xn - X0
+ΔY = Yn - Y0
+M = ΔY / ΔX (slope)"
+What are the 4 cases in DDA Algorithm?,"Case 1: M < 1 → X1 = X0 + ΔX, Y1 = Y0 + M × ΔX
+Case 2: M ≥ 1 → X1 = X0 + ΔY / M, Y1 = Y0 + ΔY
+Case 3: M = 1 → X1 = X0 + ΔX, Y1 = Y0 + ΔY
+Case 4: M undefined (vertical line)"
+What is the stopping condition for DDA?,Keep repeating until end point is reached OR number of generated points equals the steps count.
+Advantages of DDA Algorithm?,"1. Simple and easy to implement
+2. Fast method for calculating pixel positions
+3. Eliminates multiplication by using incremental calculations"
+Disadvantages of DDA Algorithm?,"1. Uses floating point arithmetic (slower)
+2. Requires rounding operations
+3. Less accurate for circles and curves
+4. Time consuming due to rounding"
+What is Bresenham Line Drawing Algorithm?,"An incremental scan conversion algorithm that uses ONLY integer calculations to generate line points, making it faster and more efficient than DDA."
+What is the key advantage of Bresenham over DDA?,"Uses only INTEGER arithmetic (addition/subtraction) instead of floating-point operations, making it much faster."
+What is the decision parameter in Bresenham?,Pk - a parameter used to decide which pixel to select next. Based on the difference between upper and lower pixel distances from the mathematical line.
+Initial decision parameter for Bresenham?,P0 = 2Δy - Δx (for slope < 1)
+Decision rules in Bresenham Algorithm?,"If Pk < 0: Select lower pixel, Pk+1 = Pk + 2Δy
+If Pk ≥ 0: Select upper pixel, Pk+1 = Pk + 2Δy - 2Δx"
+Advantages of Bresenham Algorithm?,"1. Uses only integer arithmetic
+2. Faster than DDA
+3. More accurate for lines and circles
+4. No rounding required
+5. More efficient"
+Disadvantages of Bresenham Algorithm?,"1. Still produces non-smooth lines in some cases
+2. More complex to understand than DDA"
+DDA vs Bresenham: Arithmetic?,"DDA: Floating-point arithmetic
+Bresenham: Integer arithmetic"
+DDA vs Bresenham: Speed?,"DDA: Slower due to real arithmetic and rounding
+Bresenham: Faster due to integer-only operations"
+DDA vs Bresenham: Accuracy?,"DDA: Lower accuracy for curves/circles
+Bresenham: Higher accuracy"
+DDA vs Bresenham: Operations?,"DDA: Multiplication and division
+Bresenham: Only addition and subtraction"
